@@ -1,0 +1,62 @@
+# PA1.1: Alphabet Soup Problem
+def alphabet_string(input_string):
+    sorted_char = sorted(input_string)
+    sorted_string = ''.join(sorted_char)
+    return sorted_string
+
+input_string = input("Enter a string of characters: ")
+
+sorted_string = alphabet_string(input_string)
+
+print("String of characters in alphabetical order:", sorted_string)
+
+# PA1.2: Emoticon Problem
+def rep_emoticon(sentence):
+    emoticon_dict = {
+        "smile": ":)",
+        "grin": ":D",
+        "sad": ":((",
+        "mad": ">:(",
+    }
+    
+    words = sentence.split()
+
+    replaced_sentence = ' '.join([emoticon_dict.get(word, word) for word in words])
+
+    return replaced_sentence
+
+input_sentence = input("Enter a sentence: ")
+result_sentence = rep_emoticon(input_sentence)
+
+print("Sentence with emoticons: ", result_sentence)
+
+# PA1.2: Emoticon Problem (Edited)
+def rep_emoticon(sentence):
+    emoticon_dict = {
+        "smile": "( ˶ˆᗜˆ˵ )",
+        "grin": "(~‾‾∇‾‾  )~",
+        "sad": "૮(˶ㅠ︿ㅠ)ა",
+        "mad": "<( •̀ᴖ•́)>",
+        "lmao": "(๑≧▽≦)",
+        "mischief" : "( ͡° ͜ʖ ͡°)",
+    }
+    
+    words = sentence.split()
+
+    replaced_sentence = ' '.join([emoticon_dict.get(word, word) for word in words])
+
+    return replaced_sentence
+
+input_sentence = input("Enter a sentence: ")
+result_sentence = rep_emoticon(input_sentence)
+
+print("Sentence with emoticons: ", result_sentence)
+
+PA1.3: Unpacking List problem
+writeyourcodehere = [1,2,3,4,5,6]
+
+first, *middle, last = writeyourcodehere
+
+print("First: ", first)
+print("Middle: ", middle)
+print("Last: ", last)
